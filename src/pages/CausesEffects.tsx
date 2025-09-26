@@ -131,13 +131,29 @@ const CausesEffects = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-red-600 to-red-800 rounded-2xl text-white p-8 mb-8">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl font-bold mb-4">Diabetes: Causes & Effects</h1>
-          <p className="text-xl text-red-100 leading-relaxed">
-            Understanding the underlying causes of diabetes and its wide-ranging effects on the body 
-            is crucial for prevention, early detection, and effective management.
-          </p>
+      <div className="relative bg-gradient-to-r from-red-900 via-red-800 to-orange-900 rounded-2xl overflow-hidden mb-8">
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <img 
+          src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Medical research on diabetes causes"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+        <div className="relative z-10 p-8">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Diabetes: Causes & Effects</h1>
+            <p className="text-xl text-red-100 leading-relaxed mb-6">
+              Understanding the underlying causes of diabetes and its wide-ranging effects on the body 
+              is crucial for prevention, early detection, and effective management.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2">
+                <span className="text-white font-semibold">Multiple Risk Factors</span>
+              </div>
+              <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2">
+                <span className="text-white font-semibold">Preventable Complications</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -153,6 +169,7 @@ const CausesEffects = () => {
             const Icon = cause.icon;
             return (
               <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                <div className="h-1 bg-gradient-to-r from-red-500 to-orange-500"></div>
                 <div className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 bg-red-100 rounded-lg">
@@ -169,6 +186,15 @@ const CausesEffects = () => {
                     </div>
                   </div>
                 </div>
+                {index === 0 && (
+                  <div className="px-6 pb-6">
+                    <img 
+                      src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                      alt="Insulin resistance research"
+                      className="w-full h-32 object-cover rounded-lg shadow-md"
+                    />
+                  </div>
+                )}
               </div>
             );
           })}
@@ -180,6 +206,7 @@ const CausesEffects = () => {
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Contributing Lifestyle Factors</h2>
         
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <div className="h-1 bg-gradient-to-r from-yellow-500 to-orange-500"></div>
           <div className="p-6">
             <div className="space-y-4">
               {lifestyleFactors.map((factor, index) => (
@@ -197,6 +224,13 @@ const CausesEffects = () => {
               ))}
             </div>
           </div>
+          <div className="p-6 bg-gray-50">
+            <img 
+              src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600" 
+              alt="Lifestyle factors affecting diabetes"
+              className="w-full h-40 object-cover rounded-lg shadow-md"
+            />
+          </div>
         </div>
       </div>
 
@@ -204,6 +238,7 @@ const CausesEffects = () => {
         
         {/* Short-term Effects */}
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <div className="h-1 bg-gradient-to-r from-yellow-500 to-amber-500"></div>
           <div className="p-6 border-b border-gray-100">
             <h2 className="text-2xl font-bold text-gray-900 flex items-center">
               <AlertTriangle className="mr-3 h-6 w-6 text-yellow-600" />
@@ -230,10 +265,18 @@ const CausesEffects = () => {
               </p>
             </div>
           </div>
+          <div className="p-6 bg-gray-50">
+            <img 
+              src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=400" 
+              alt="Early diabetes symptoms"
+              className="w-full h-32 object-cover rounded-lg shadow-md"
+            />
+          </div>
         </div>
 
         {/* Long-term Complications */}
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <div className="h-1 bg-gradient-to-r from-red-500 to-pink-500"></div>
           <div className="p-6 border-b border-gray-100">
             <h2 className="text-2xl font-bold text-gray-900 flex items-center">
               <TrendingUp className="mr-3 h-6 w-6 text-red-600" />
@@ -269,39 +312,54 @@ const CausesEffects = () => {
               })}
             </div>
           </div>
+          <div className="p-6 bg-gray-50">
+            <img 
+              src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=400" 
+              alt="Long-term diabetes complications"
+              className="w-full h-32 object-cover rounded-lg shadow-md"
+            />
+          </div>
         </div>
       </div>
 
       {/* Prevention Tips */}
-      <div className="mt-12 bg-gradient-to-r from-green-600 to-green-800 rounded-2xl text-white p-8">
-        <h2 className="text-3xl font-bold mb-6">Prevention & Management</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white bg-opacity-10 rounded-lg p-4">
-            <h3 className="font-semibold mb-2">Lifestyle Modifications</h3>
-            <ul className="text-sm space-y-1 text-green-100">
-              <li>• Maintain healthy weight</li>
-              <li>• Regular physical activity</li>
-              <li>• Balanced, nutritious diet</li>
-              <li>• Adequate sleep</li>
-            </ul>
-          </div>
-          <div className="bg-white bg-opacity-10 rounded-lg p-4">
-            <h3 className="font-semibold mb-2">Medical Management</h3>
-            <ul className="text-sm space-y-1 text-green-100">
-              <li>• Regular blood glucose monitoring</li>
-              <li>• Medication adherence</li>
-              <li>• Regular medical check-ups</li>
-              <li>• Blood pressure control</li>
-            </ul>
-          </div>
-          <div className="bg-white bg-opacity-10 rounded-lg p-4">
-            <h3 className="font-semibold mb-2">Complication Prevention</h3>
-            <ul className="text-sm space-y-1 text-green-100">
-              <li>• Annual eye examinations</li>
-              <li>• Kidney function monitoring</li>
-              <li>• Foot care and inspection</li>
-              <li>• Cardiovascular risk assessment</li>
-            </ul>
+      <div className="mt-12 relative bg-gradient-to-r from-green-900 via-green-800 to-teal-900 rounded-2xl overflow-hidden">
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <img 
+          src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Diabetes prevention and management"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+        <div className="relative z-10 p-8">
+          <h2 className="text-3xl font-bold mb-6 text-white">Prevention & Management</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
+              <h3 className="font-semibold mb-2 text-white">Lifestyle Modifications</h3>
+              <ul className="text-sm space-y-1 text-green-100">
+                <li>• Maintain healthy weight</li>
+                <li>• Regular physical activity</li>
+                <li>• Balanced, nutritious diet</li>
+                <li>• Adequate sleep</li>
+              </ul>
+            </div>
+            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
+              <h3 className="font-semibold mb-2 text-white">Medical Management</h3>
+              <ul className="text-sm space-y-1 text-green-100">
+                <li>• Regular blood glucose monitoring</li>
+                <li>• Medication adherence</li>
+                <li>• Regular medical check-ups</li>
+                <li>• Blood pressure control</li>
+              </ul>
+            </div>
+            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
+              <h3 className="font-semibold mb-2 text-white">Complication Prevention</h3>
+              <ul className="text-sm space-y-1 text-green-100">
+                <li>• Annual eye examinations</li>
+                <li>• Kidney function monitoring</li>
+                <li>• Foot care and inspection</li>
+                <li>• Cardiovascular risk assessment</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

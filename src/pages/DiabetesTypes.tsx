@@ -180,14 +180,30 @@ const DiabetesTypes = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl text-white p-8 mb-8">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl font-bold mb-4">Types of Diabetes</h1>
-          <p className="text-xl text-purple-100 leading-relaxed">
-            Diabetes is not a single disease but a group of metabolic disorders with different causes, 
-            characteristics, and treatment approaches. Understanding these differences is crucial for 
-            proper diagnosis and management.
-          </p>
+      <div className="relative bg-gradient-to-r from-purple-900 via-purple-800 to-indigo-900 rounded-2xl overflow-hidden mb-8">
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <img 
+          src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Different types of diabetes research"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+        <div className="relative z-10 p-8">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Types of Diabetes</h1>
+            <p className="text-xl text-purple-100 leading-relaxed mb-6">
+              Diabetes is not a single disease but a group of metabolic disorders with different causes, 
+              characteristics, and treatment approaches. Understanding these differences is crucial for 
+              proper diagnosis and management.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2">
+                <span className="text-white font-semibold">4 Main Types</span>
+              </div>
+              <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2">
+                <span className="text-white font-semibold">Different Treatments</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -195,6 +211,7 @@ const DiabetesTypes = () => {
       <div className="mb-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Quick Comparison</h2>
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <div className="h-2 bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500"></div>
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gray-50">
@@ -228,6 +245,29 @@ const DiabetesTypes = () => {
             </table>
           </div>
         </div>
+        
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+          <img 
+            src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300" 
+            alt="Type 1 diabetes research"
+            className="w-full h-32 object-cover rounded-lg shadow-md"
+          />
+          <img 
+            src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=300" 
+            alt="Type 2 diabetes management"
+            className="w-full h-32 object-cover rounded-lg shadow-md"
+          />
+          <img 
+            src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=300" 
+            alt="Gestational diabetes care"
+            className="w-full h-32 object-cover rounded-lg shadow-md"
+          />
+          <img 
+            src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300" 
+            alt="MODY diabetes genetics"
+            className="w-full h-32 object-cover rounded-lg shadow-md"
+          />
+        </div>
       </div>
 
       {/* Detailed Type Information */}
@@ -241,6 +281,7 @@ const DiabetesTypes = () => {
           return (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
               <div className={`p-6 ${colors.bg} border-b ${colors.border}`}>
+                <div className="h-1 bg-gradient-to-r from-gray-400 to-gray-600 mb-4 rounded"></div>
                 <div className="flex items-center space-x-4">
                   <div className={`p-3 rounded-lg ${colors.icon}`}>
                     <Icon className="h-8 w-8" />
@@ -253,6 +294,26 @@ const DiabetesTypes = () => {
                   </div>
                 </div>
               </div>
+              
+              {index === 0 && (
+                <div className="px-6 pt-4">
+                  <img 
+                    src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                    alt="Type 1 diabetes insulin therapy"
+                    className="w-full h-40 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+              )}
+              
+              {index === 1 && (
+                <div className="px-6 pt-4">
+                  <img 
+                    src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                    alt="Type 2 diabetes lifestyle management"
+                    className="w-full h-40 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+              )}
               
               <div className="p-6">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -323,6 +384,7 @@ const DiabetesTypes = () => {
             const Icon = type.icon;
             return (
               <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                <div className="h-1 bg-gradient-to-r from-gray-400 to-gray-500"></div>
                 <div className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 bg-gray-100 rounded-lg">
@@ -342,6 +404,7 @@ const DiabetesTypes = () => {
 
       {/* Diagnostic Criteria */}
       <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+        <div className="h-2 bg-gradient-to-r from-blue-500 to-purple-500"></div>
         <div className="p-6 border-b border-gray-100">
           <h2 className="text-2xl font-bold text-gray-900 flex items-center">
             <Clock className="mr-3 h-6 w-6 text-blue-600" />
@@ -395,6 +458,14 @@ const DiabetesTypes = () => {
               gestational diabetes and special populations.
             </p>
           </div>
+        </div>
+        
+        <div className="p-6 bg-gray-50">
+          <img 
+            src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=600" 
+            alt="Diabetes diagnostic testing"
+            className="w-full h-40 object-cover rounded-lg shadow-md"
+          />
         </div>
       </div>
     </div>

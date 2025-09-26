@@ -39,13 +39,29 @@ const AboutDiabetes = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl text-white p-8 mb-8">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl font-bold mb-4">Understanding Diabetes</h1>
-          <p className="text-xl text-blue-100 leading-relaxed">
-            Diabetes is a chronic metabolic disorder characterized by elevated blood glucose levels. 
-            It occurs when the body cannot effectively produce or use insulin, a hormone that regulates blood sugar.
-          </p>
+      <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 rounded-2xl overflow-hidden mb-8">
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <img 
+          src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Medical research and diabetes care"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+        <div className="relative z-10 p-8">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Understanding Diabetes</h1>
+            <p className="text-xl text-blue-100 leading-relaxed mb-6">
+              Diabetes is a chronic metabolic disorder characterized by elevated blood glucose levels. 
+              It occurs when the body cannot effectively produce or use insulin, a hormone that regulates blood sugar.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2">
+                <span className="text-white font-semibold">537M+ affected worldwide</span>
+              </div>
+              <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2">
+                <span className="text-white font-semibold">Leading cause of blindness</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -66,6 +82,7 @@ const AboutDiabetes = () => {
           
           {/* What is Diabetes */}
           <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+            <div className="h-1 bg-gradient-to-r from-blue-500 to-teal-500"></div>
             <div className="p-6 border-b border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 flex items-center">
                 <Activity className="mr-3 h-6 w-6 text-blue-600" />
@@ -101,10 +118,18 @@ const AboutDiabetes = () => {
                 </div>
               </div>
             </div>
+            <div className="p-6 bg-gray-50">
+              <img 
+                src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="Diabetes research and monitoring"
+                className="w-full h-48 object-cover rounded-lg shadow-md"
+              />
+            </div>
           </div>
 
           {/* How Diabetes Develops */}
           <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+            <div className="h-1 bg-gradient-to-r from-green-500 to-blue-500"></div>
             <div className="p-6 border-b border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900">How Diabetes Develops</h2>
             </div>
@@ -159,10 +184,18 @@ const AboutDiabetes = () => {
                 </div>
               </div>
             </div>
+            <div className="p-6 bg-gray-50">
+              <img 
+                src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="Medical consultation about diabetes"
+                className="w-full h-40 object-cover rounded-lg shadow-md"
+              />
+            </div>
           </div>
 
           {/* Risk Factors */}
           <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+            <div className="h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
             <div className="p-6 border-b border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900">Risk Factors</h2>
             </div>
@@ -217,12 +250,27 @@ const AboutDiabetes = () => {
                 </div>
               </div>
             </div>
+            <div className="p-6 bg-gray-50">
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                  alt="Healthy lifestyle choices"
+                  className="w-full h-32 object-cover rounded-lg shadow-md"
+                />
+                <img 
+                  src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                  alt="Medical screening"
+                  className="w-full h-32 object-cover rounded-lg shadow-md"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Sidebar - Complications */}
         <div className="lg:col-span-1">
           <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden sticky top-8">
+            <div className="h-1 bg-gradient-to-r from-red-500 to-pink-500"></div>
             <div className="p-6 border-b border-gray-100">
               <h2 className="text-xl font-bold text-gray-900 flex items-center">
                 <AlertCircle className="mr-2 h-5 w-5 text-red-600" />
@@ -261,6 +309,14 @@ const AboutDiabetes = () => {
                 <strong>Important:</strong> Early detection and proper management can prevent or delay 
                 most diabetes complications. Regular monitoring and medical care are essential.
               </p>
+            </div>
+            
+            <div className="p-4">
+              <img 
+                src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                alt="Diabetic complications awareness"
+                className="w-full h-32 object-cover rounded-lg shadow-md"
+              />
             </div>
           </div>
         </div>

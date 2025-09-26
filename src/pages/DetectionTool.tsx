@@ -145,6 +145,89 @@ const DetectionTool = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Hero Banner with Medical Imagery */}
+      <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-teal-800 rounded-2xl overflow-hidden mb-8">
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent"></div>
+        <img 
+          src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Medical professional examining retinal scan"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="relative z-10 px-8 py-12">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              AI-Powered Diabetic Retinopathy Detection
+            </h1>
+            <p className="text-xl text-blue-100 leading-relaxed mb-6">
+              Upload a retinal fundus image for instant AI analysis. Our advanced machine learning 
+              model helps detect early signs of diabetic retinopathy with high accuracy.
+            </p>
+            <div className="flex items-center space-x-6 text-blue-100">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="h-5 w-5 text-green-400" />
+                <span className="text-sm">FDA-Grade Analysis</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Eye className="h-5 w-5 text-blue-400" />
+                <span className="text-sm">Instant Results</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <AlertTriangle className="h-5 w-5 text-yellow-400" />
+                <span className="text-sm">Early Detection</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Information Section */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <img 
+            src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            alt="Diabetic retinopathy stages"
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Understanding Diabetic Retinopathy</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Learn about the different stages of diabetic retinopathy and how early detection 
+              can prevent vision loss and blindness.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <img 
+            src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            alt="AI technology in healthcare"
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">AI-Powered Analysis</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Our advanced machine learning algorithms analyze retinal images with precision 
+              comparable to specialist ophthalmologists.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <img 
+            src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            alt="Medical consultation"
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Consultation</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Always consult with qualified healthcare professionals for proper diagnosis 
+              and treatment recommendations.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         {/* Input Section */}
@@ -152,6 +235,7 @@ const DetectionTool = () => {
           
           {/* Image Upload Card */}
           <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+            <div className="h-2 bg-gradient-to-r from-blue-500 to-teal-500"></div>
             <div className="p-6 border-b border-gray-100">
               <h2 className="text-lg font-semibold text-gray-900 flex items-center">
                 <Upload className="mr-2 h-5 w-5 text-blue-600" />
@@ -177,16 +261,28 @@ const DetectionTool = () => {
                     <img 
                       src={imagePreview} 
                       alt="Uploaded retinal image" 
-                      className="max-w-full max-h-64 mx-auto rounded-lg shadow-md object-contain"
+                      className="max-w-full max-h-64 mx-auto rounded-lg shadow-lg object-contain border-2 border-gray-200"
                     />
                     <p className="text-sm text-gray-600">{uploadedImage?.name}</p>
+                    <div className="flex items-center justify-center space-x-2 text-green-600">
+                      <CheckCircle className="h-4 w-4" />
+                      <span className="text-sm font-medium">Image uploaded successfully</span>
+                    </div>
                   </div>
                 ) : (
                   <div className="space-y-4">
-                    <Upload className="mx-auto h-12 w-12 text-gray-400" />
+                    <div className="relative">
+                      <img 
+                        src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Retinal examination"
+                        className="mx-auto h-24 w-24 rounded-full object-cover opacity-20"
+                      />
+                      <Upload className="absolute inset-0 mx-auto h-12 w-12 text-blue-500 top-6" />
+                    </div>
                     <div>
                       <p className="text-lg font-medium text-gray-900">Upload retinal image</p>
-                      <p className="text-sm text-gray-600">Drag and drop or click to browse</p>
+                      <p className="text-sm text-gray-600">Drag and drop a fundus photograph or click to browse</p>
+                      <p className="text-xs text-gray-500 mt-1">Supported formats: JPEG, PNG (Max 10MB)</p>
                     </div>
                   </div>
                 )}
@@ -203,6 +299,7 @@ const DetectionTool = () => {
 
           {/* Patient Information Card */}
           <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+            <div className="h-2 bg-gradient-to-r from-teal-500 to-green-500"></div>
             <div className="p-6 border-b border-gray-100">
               <h2 className="text-lg font-semibold text-gray-900 flex items-center">
                 <User className="mr-2 h-5 w-5 text-blue-600" />
@@ -283,6 +380,7 @@ const DetectionTool = () => {
         {/* Results Section */}
         <div className="lg:col-span-1">
           <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden sticky top-8">
+            <div className="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
             <div className="p-6 border-b border-gray-100">
               <h2 className="text-lg font-semibold text-gray-900 flex items-center">
                 <Clock className="mr-2 h-5 w-5 text-blue-600" />
@@ -357,7 +455,14 @@ const DetectionTool = () => {
                 </div>
               ) : (
                 <div className="text-center text-gray-500 py-8">
-                  <Eye className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                      alt="Eye examination"
+                      className="h-16 w-16 mx-auto rounded-full object-cover opacity-30"
+                    />
+                    <Eye className="absolute inset-0 h-8 w-8 mx-auto mt-4 opacity-50" />
+                  </div>
                   <p className="font-medium">Upload an image to begin analysis</p>
                   <p className="text-sm">Results will appear here</p>
                 </div>
