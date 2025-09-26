@@ -180,54 +180,6 @@ const DetectionTool = () => {
           </div>
         </div>
       </div>
-
-      {/* Information Section */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-          <img 
-            src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=400" 
-            alt="Diabetic retinopathy stages"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Understanding Diabetic Retinopathy</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Learn about the different stages of diabetic retinopathy and how early detection 
-              can prevent vision loss and blindness.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-          <img 
-            src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=400" 
-            alt="Retinal imaging technology"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">AI-Powered Analysis</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Our advanced machine learning algorithms analyze retinal images with precision 
-              comparable to specialist ophthalmologists.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-          <img 
-            src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=400" 
-            alt="Ophthalmologist consultation"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Consultation</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Always consult with qualified healthcare professionals for proper diagnosis 
-              and treatment recommendations.
-            </p>
-          </div>
-        </div>
-      </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         {/* Input Section */}
@@ -468,6 +420,53 @@ const DetectionTool = () => {
                 </div>
               )}
             </div>
+          </div>
+        </div>
+      </div>
+      {/* Information Section */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <img 
+            src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            alt="Diabetic retinopathy stages"
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Understanding Diabetic Retinopathy</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Learn about the different stages of diabetic retinopathy and how early detection 
+              can prevent vision loss and blindness.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <img 
+            src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            alt="Retinal imaging technology"
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">AI-Powered Analysis</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Our advanced machine learning algorithms analyze retinal images with precision 
+              comparable to specialist ophthalmologists.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <img 
+            src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            alt="Ophthalmologist consultation"
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Consultation</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Always consult with qualified healthcare professionals for proper diagnosis 
+              and treatment recommendations.
+            </p>
           </div>
         </div>
       </div>
