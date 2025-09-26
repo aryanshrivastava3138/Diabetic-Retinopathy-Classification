@@ -1,19 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { 
-  ArrowLeft, 
-  Download, 
-  Eye, 
-  Calendar, 
-  Clock, 
-  User, 
-  FileText,
-  AlertTriangle,
-  CheckCircle,
-  AlertCircle,
-  XCircle,
-  Activity
-} from 'lucide-react';
+import { ArrowLeft, Download, Eye, Calendar, Clock, User, FileText, TriangleAlert as AlertTriangle, CircleCheck as CheckCircle, CircleAlert as AlertCircle, Circle as XCircle, Activity } from 'lucide-react';
 
 interface PredictionResult {
   class: string;
