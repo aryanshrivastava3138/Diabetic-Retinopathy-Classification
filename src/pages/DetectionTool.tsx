@@ -150,8 +150,8 @@ const DetectionTool = () => {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent"></div>
         <img 
-          src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-          alt="Medical professional examining retinal scan"
+          src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Diabetic retinopathy fundus examination"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-10 px-8 py-12">
@@ -185,7 +185,7 @@ const DetectionTool = () => {
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
           <img 
-            src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=400" 
             alt="Diabetic retinopathy stages"
             className="w-full h-48 object-cover"
           />
@@ -200,8 +200,8 @@ const DetectionTool = () => {
 
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
           <img 
-            src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400" 
-            alt="AI technology in healthcare"
+            src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            alt="Retinal imaging technology"
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
@@ -215,8 +215,8 @@ const DetectionTool = () => {
 
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
           <img 
-            src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=400" 
-            alt="Medical consultation"
+            src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            alt="Ophthalmologist consultation"
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
@@ -273,8 +273,8 @@ const DetectionTool = () => {
                   <div className="space-y-4">
                     <div className="relative">
                       <img 
-                        src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                        alt="Retinal examination"
+                        src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Fundus photography for diabetic retinopathy"
                         className="mx-auto h-24 w-24 rounded-full object-cover opacity-20"
                       />
                       <Upload className="absolute inset-0 mx-auto h-12 w-12 text-blue-500 top-6" />
@@ -457,8 +457,8 @@ const DetectionTool = () => {
                 <div className="text-center text-gray-500 py-8">
                   <div className="relative mb-4">
                     <img 
-                      src="https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=300" 
-                      alt="Eye examination"
+                      src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                      alt="Diabetic retinopathy screening"
                       className="h-16 w-16 mx-auto rounded-full object-cover opacity-30"
                     />
                     <Eye className="absolute inset-0 h-8 w-8 mx-auto mt-4 opacity-50" />

@@ -134,8 +134,8 @@ const CausesEffects = () => {
       <div className="relative bg-gradient-to-r from-red-900 via-red-800 to-orange-900 rounded-2xl overflow-hidden mb-8">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <img 
-          src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-          alt="Medical research on diabetes causes"
+          src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Diabetic retinopathy examination and causes research"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="relative z-10 p-8">
@@ -189,8 +189,8 @@ const CausesEffects = () => {
                 {index === 0 && (
                   <div className="px-6 pb-6">
                     <img 
-                      src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                      alt="Insulin resistance research"
+                      src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                      alt="Diabetic retinopathy pathophysiology research"
                       className="w-full h-32 object-cover rounded-lg shadow-md"
                     />
                   </div>
@@ -226,8 +226,8 @@ const CausesEffects = () => {
           </div>
           <div className="p-6 bg-gray-50">
             <img 
-              src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600" 
-              alt="Lifestyle factors affecting diabetes"
+              src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=600" 
+              alt="Risk factors for diabetic retinopathy development"
               className="w-full h-40 object-cover rounded-lg shadow-md"
             />
           </div>
@@ -267,8 +267,8 @@ const CausesEffects = () => {
           </div>
           <div className="p-6 bg-gray-50">
             <img 
-              src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=400" 
-              alt="Early diabetes symptoms"
+              src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=400" 
+              alt="Early diabetic retinopathy symptoms and detection"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
           </div>
@@ -314,8 +314,8 @@ const CausesEffects = () => {
           </div>
           <div className="p-6 bg-gray-50">
             <img 
-              src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=400" 
-              alt="Long-term diabetes complications"
+              src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=400" 
+              alt="Advanced diabetic retinopathy complications"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
           </div>
@@ -326,8 +326,8 @@ const CausesEffects = () => {
       <div className="mt-12 relative bg-gradient-to-r from-green-900 via-green-800 to-teal-900 rounded-2xl overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <img 
-          src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-          alt="Diabetes prevention and management"
+          src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Diabetic retinopathy prevention and management strategies"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="relative z-10 p-8">

@@ -42,8 +42,8 @@ const AboutDiabetes = () => {
       <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 rounded-2xl overflow-hidden mb-8">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <img 
-          src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-          alt="Medical research and diabetes care"
+          src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Diabetic retinopathy fundus examination and research"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="relative z-10 p-8">
@@ -120,8 +120,8 @@ const AboutDiabetes = () => {
             </div>
             <div className="p-6 bg-gray-50">
               <img 
-                src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="Diabetes research and monitoring"
+                src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="Diabetic retinopathy screening and monitoring"
                 className="w-full h-48 object-cover rounded-lg shadow-md"
               />
             </div>
@@ -186,8 +186,8 @@ const AboutDiabetes = () => {
             </div>
             <div className="p-6 bg-gray-50">
               <img 
-                src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="Medical consultation about diabetes"
+                src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="Ophthalmologist examining patient for diabetic retinopathy"
                 className="w-full h-40 object-cover rounded-lg shadow-md"
               />
             </div>
@@ -253,13 +253,13 @@ const AboutDiabetes = () => {
             <div className="p-6 bg-gray-50">
               <div className="grid grid-cols-2 gap-4">
                 <img 
-                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300" 
-                  alt="Healthy lifestyle choices"
+                  src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                  alt="Diabetic retinopathy prevention through monitoring"
                   className="w-full h-32 object-cover rounded-lg shadow-md"
                 />
                 <img 
-                  src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=300" 
-                  alt="Medical screening"
+                  src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                  alt="Retinal screening for diabetic complications"
                   className="w-full h-32 object-cover rounded-lg shadow-md"
                 />
               </div>
@@ -313,7 +313,7 @@ const AboutDiabetes = () => {
             
             <div className="p-4">
               <img 
-                src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=400" 
                 alt="Diabetic complications awareness"
                 className="w-full h-32 object-cover rounded-lg shadow-md"
               />
