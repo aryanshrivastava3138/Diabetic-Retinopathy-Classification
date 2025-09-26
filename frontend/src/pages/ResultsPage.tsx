@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Download, Eye, User, FileText, AlertTriangle, CheckCircle, AlertCircle, XCircle, Activity } from 'lucide-react';
+import { ArrowLeft, Download, Eye, User, FileText, TriangleAlert as AlertTriangle, CircleCheck as CheckCircle, CircleAlert as AlertCircle, Circle as XCircle, Activity } from 'lucide-react';
 
 interface PredictionResult {
   class: string;
@@ -61,7 +61,7 @@ const ResultsPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">No Results Found</h2>
           <p className="text-gray-600 mb-6">Please upload an image for analysis first.</p>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/detection')}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Go to Detection Tool
@@ -129,7 +129,7 @@ This analysis is for screening purposes only and should not replace professional
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/detection')}
             className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
@@ -292,7 +292,7 @@ This analysis is for screening purposes only and should not replace professional
         {/* Action Buttons */}
         <div className="mt-8 flex justify-center space-x-4">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/detection')}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
           >
             <Eye className="h-4 w-4 mr-2" />
