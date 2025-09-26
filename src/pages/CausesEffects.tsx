@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Target, AlertTriangle, TrendingUp, Heart, Brain, Eye, LucideKey as Kidney, Shield, Activity } from 'lucide-react';
+import { Zap, Target, AlertTriangle, TrendingUp, Heart, Brain, Eye, FileKey as Kidney, Shield, Activity } from 'lucide-react';
 
 const CausesEffects = () => {
   const primaryCauses = [

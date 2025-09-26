@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Brain, Eye, LucideKey as Kidney, Activity, AlertCircle } from 'lucide-react';
+import { Heart, Brain, Eye, FileKey as Kidney, Activity, AlertCircle } from 'lucide-react';
 
 const AboutDiabetes = () => {
   const complications = [
