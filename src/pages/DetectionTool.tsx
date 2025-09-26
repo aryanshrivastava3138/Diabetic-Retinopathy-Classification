@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Upload, Eye, User, Calendar, Clock, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
 interface PatientInfo {
@@ -32,11 +33,11 @@ const severityIcons = {
 };
 
 const DetectionTool = () => {
+  const navigate = useNavigate();
   const [uploadedImage, setUploadedImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string>('');
   const [patientInfo, setPatientInfo] = useState<PatientInfo>({ id: '', age: '', eye: '' });
   const [isProcessing, setIsProcessing] = useState(false);
-  const [result, setResult] = useState<PredictionResult | null>(null);
   const [dragActive, setDragActive] = useState(false);
 
   const mockResults: PredictionResult[] = [
@@ -130,18 +131,24 @@ const DetectionTool = () => {
     
     // Return random result for demo
     const randomResult = mockResults[Math.floor(Math.random() * mockResults.length)];
-    setResult(randomResult);
     setIsProcessing(false);
+    
+    // Navigate to results page with data
+    navigate('/results', {
+      state: {
+        result: randomResult,
+        patientInfo: patientInfo,
+        imagePreview: imagePreview,
+        fileName: uploadedImage.name
+      }
+    });
   };
 
   const resetAnalysis = () => {
     setUploadedImage(null);
     setImagePreview('');
-    setResult(null);
     setPatientInfo({ id: '', age: '', eye: '' });
   };
-
-  const SeverityIcon = result ? severityIcons[result.severity] : Eye;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -331,81 +338,36 @@ const DetectionTool = () => {
 
         {/* Results Section */}
         <div className="lg:col-span-1">
-          <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden sticky top-8">
-            <div className="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-            <div className="p-6 border-b border-gray-100">
-              <h2 className="text-lg font-semibold text-gray-900 flex items-center">
-                <Clock className="mr-2 h-5 w-5 text-blue-600" />
-                Analysis Results
-              </h2>
-            </div>
-            
-            <div className="p-6">
-              {isProcessing ? (
+          {isProcessing ? (
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden sticky top-8">
+              <div className="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+              <div className="p-6 border-b border-gray-100">
+                <h2 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <Clock className="mr-2 h-5 w-5 text-blue-600" />
+                  Processing Analysis
+                </h2>
+              </div>
+              <div className="p-6">
                 <div className="text-center space-y-4">
                   <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
                   <div>
-                    <p className="font-medium text-gray-900">Processing Image</p>
+                    <p className="font-medium text-gray-900">Analyzing Image</p>
                     <p className="text-sm text-gray-600">AI analysis in progress...</p>
+                    <p className="text-xs text-gray-500 mt-2">Results will open in a new page</p>
                   </div>
                 </div>
-              ) : result ? (
-                <div className="space-y-6">
-                  {/* Prediction Result */}
-                  <div className={`p-4 rounded-lg border-2 ${severityColors[result.severity]}`}>
-                    <div className="flex items-start space-x-3">
-                      <SeverityIcon className="h-6 w-6 flex-shrink-0 mt-0.5" />
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-lg">{result.class}</h3>
-                        <p className="text-sm opacity-90 mt-1">{result.description}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Confidence Score */}
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-700">Confidence</span>
-                      <span className="text-sm font-bold text-gray-900">{result.confidence}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${result.confidence}%` }}
-                      ></div>
-                    </div>
-                  </div>
-
-                  {/* Recommendation */}
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-medium text-gray-900 mb-2 flex items-center">
-                      <AlertTriangle className="h-4 w-4 mr-2 text-amber-600" />
-                      Recommendation
-                    </h4>
-                    <p className="text-sm text-gray-700 leading-relaxed">{result.recommendation}</p>
-                  </div>
-
-                  {/* Patient Info Display */}
-                  {(patientInfo.id || patientInfo.age || patientInfo.eye) && (
-                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                      <h4 className="font-medium text-blue-900 mb-2">Patient Details</h4>
-                      <div className="text-sm text-blue-800 space-y-1">
-                        {patientInfo.id && <p>ID: {patientInfo.id}</p>}
-                        {patientInfo.age && <p>Age: {patientInfo.age} years</p>}
-                        {patientInfo.eye && <p>Eye: {patientInfo.eye === 'left' ? 'Left' : 'Right'}</p>}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Disclaimer */}
-                  <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                    <p className="text-xs text-amber-800">
-                      <strong>Medical Disclaimer:</strong> This AI analysis is for screening purposes only. 
-                      Always consult with a qualified ophthalmologist for proper medical diagnosis and treatment decisions.
-                    </p>
-                  </div>
-                </div>
-              ) : (
+              </div>
+            </div>
+          ) : (
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden sticky top-8">
+              <div className="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+              <div className="p-6 border-b border-gray-100">
+                <h2 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <Clock className="mr-2 h-5 w-5 text-blue-600" />
+                  Ready for Analysis
+                </h2>
+              </div>
+              <div className="p-6">
                 <div className="text-center text-gray-500 py-8">
                   <div className="relative mb-4">
                     <img 
@@ -416,11 +378,11 @@ const DetectionTool = () => {
                     <Eye className="absolute inset-0 h-8 w-8 mx-auto mt-4 opacity-50" />
                   </div>
                   <p className="font-medium">Upload an image to begin analysis</p>
-                  <p className="text-sm">Results will appear here</p>
+                  <p className="text-sm">Results will open in a separate page</p>
                 </div>
-              )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
       {/* Information Section */}
