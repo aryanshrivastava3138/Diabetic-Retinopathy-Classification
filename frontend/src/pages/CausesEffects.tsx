@@ -361,7 +361,7 @@ const CausesEffects = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </div>
   );
