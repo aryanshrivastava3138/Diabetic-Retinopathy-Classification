@@ -471,5 +471,4 @@ const DiabetesTypes = () => {
     </div>
   );
 };
-
 export default DiabetesTypes;
