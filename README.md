@@ -78,7 +78,7 @@ diabetic-retinopathy-detection/
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repository-url>
+git clone (https://github.com/dasmrpmunna/Diabetic-Retinopathy-Classification)
 cd diabetic-retinopathy-detection
 ```
 
