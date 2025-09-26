@@ -224,7 +224,64 @@ Your CNN model should:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
+
+```
+MIT License
+
+Copyright (c) 2025 Diabetic Retinopathy Detection System
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## 👥 Contributors
+
+We welcome contributions from the community! This project exists thanks to all the people who contribute.
+
+### How to Contribute
+
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit your changes** (`git commit -m 'Add some amazing feature'`)
+4. **Push to the branch** (`git push origin feature/amazing-feature`)
+5. **Open a Pull Request**
+
+### Areas for Contribution
+
+- 🔬 **Model Improvements**: Enhance the CNN architecture or training process
+- 🎨 **UI/UX Enhancements**: Improve the user interface and experience
+- 📚 **Documentation**: Help improve documentation and educational content
+- 🧪 **Testing**: Add unit tests, integration tests, or end-to-end tests
+- 🌐 **Internationalization**: Add support for multiple languages
+- ♿ **Accessibility**: Improve accessibility features
+- 🐛 **Bug Fixes**: Help identify and fix bugs
+- 📊 **Analytics**: Add usage analytics and performance monitoring
+
+### Code of Conduct
+
+This project adheres to a code of conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to the project maintainers.
+
+### Recognition
+
+Contributors will be recognized in this section. Thank you to everyone who has contributed to making this project better!
+
+<!-- Add contributor names and GitHub profiles here as they contribute -->
 
 ## ⚠️ Medical Disclaimer
 
