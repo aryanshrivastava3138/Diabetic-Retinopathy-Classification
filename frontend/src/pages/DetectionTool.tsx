@@ -18,6 +18,7 @@ const severityColors = {
 };
 
 const Upload: React.FC = () => {
+const DetectionTool: React.FC = () => {
   const navigate = useNavigate();
   const [uploadedImage, setUploadedImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string>('');
@@ -323,4 +324,4 @@ const Upload: React.FC = () => {
   );
 };
 
-export default Upload;
+export default DetectionTool;
