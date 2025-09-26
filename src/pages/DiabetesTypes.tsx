@@ -183,7 +183,7 @@ const DiabetesTypes = () => {
       <div className="relative bg-gradient-to-r from-purple-900 via-purple-800 to-indigo-900 rounded-2xl overflow-hidden mb-8">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <img 
-          src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          src="/images/ophthalmologist-consultation.jpg" 
           alt="Diabetic retinopathy in different types of diabetes"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
@@ -248,22 +248,22 @@ const DiabetesTypes = () => {
         
         <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
           <img 
-            src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=300" 
+            src="/images/retinal-examination-1.jpg" 
             alt="Type 1 diabetes retinopathy screening"
             className="w-full h-32 object-cover rounded-lg shadow-md"
           />
           <img 
-            src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=300" 
+            src="/images/retinal-screening-1.jpg" 
             alt="Type 2 diabetes retinal examination"
             className="w-full h-32 object-cover rounded-lg shadow-md"
           />
           <img 
-            src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=300" 
+            src="/images/ophthalmologist-consultation.jpg" 
             alt="Gestational diabetes eye care"
             className="w-full h-32 object-cover rounded-lg shadow-md"
           />
           <img 
-            src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=300" 
+            src="/images/retinal-examination-1.jpg" 
             alt="MODY diabetes retinal monitoring"
             className="w-full h-32 object-cover rounded-lg shadow-md"
           />
@@ -298,7 +298,7 @@ const DiabetesTypes = () => {
               {index === 0 && (
                 <div className="px-6 pt-4">
                   <img 
-                    src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                    src="/images/retinal-screening-1.jpg" 
                     alt="Type 1 diabetes retinopathy management"
                     className="w-full h-40 object-cover rounded-lg shadow-md"
                   />
@@ -308,7 +308,7 @@ const DiabetesTypes = () => {
               {index === 1 && (
                 <div className="px-6 pt-4">
                   <img 
-                    src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                    src="/images/retinal-examination-1.jpg" 
                     alt="Type 2 diabetes retinal screening"
                     className="w-full h-40 object-cover rounded-lg shadow-md"
                   />
@@ -462,7 +462,7 @@ const DiabetesTypes = () => {
         
         <div className="p-6 bg-gray-50">
           <img 
-            src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=600" 
+            src="/images/ophthalmologist-consultation.jpg" 
             alt="Diabetic retinopathy diagnostic procedures"
             className="w-full h-40 object-cover rounded-lg shadow-md"
           />

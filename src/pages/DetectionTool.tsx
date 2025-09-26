@@ -157,7 +157,7 @@ const DetectionTool = () => {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent"></div>
         <img 
-          src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          src="/images/retinal-examination-1.jpg" 
           alt="Diabetic retinopathy fundus examination"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -232,7 +232,7 @@ const DetectionTool = () => {
                   <div className="space-y-4">
                     <div className="relative">
                       <img 
-                        src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        src="/images/retinal-screening-1.jpg" 
                         alt="Fundus photography for diabetic retinopathy"
                         className="mx-auto h-24 w-24 rounded-full object-cover opacity-20"
                       />
@@ -371,7 +371,7 @@ const DetectionTool = () => {
                 <div className="text-center text-gray-500 py-8">
                   <div className="relative mb-4">
                     <img 
-                      src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                      src="/images/retinal-examination-1.jpg" 
                       alt="Diabetic retinopathy screening"
                       className="h-16 w-16 mx-auto rounded-full object-cover opacity-30"
                     />
@@ -389,7 +389,7 @@ const DetectionTool = () => {
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
           <img 
-            src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            src="/images/retinal-screening-1.jpg" 
             alt="Diabetic retinopathy stages"
             className="w-full h-48 object-cover"
           />
@@ -404,7 +404,7 @@ const DetectionTool = () => {
 
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
           <img 
-            src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            src="/images/retinal-examination-1.jpg" 
             alt="Retinal imaging technology"
             className="w-full h-48 object-cover"
           />
@@ -419,7 +419,7 @@ const DetectionTool = () => {
 
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
           <img 
-            src="https://images.pexels.com/photos/7659649/pexels-photo-7659649.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            src="/images/ophthalmologist-consultation.jpg" 
             alt="Ophthalmologist consultation"
             className="w-full h-48 object-cover"
           />
