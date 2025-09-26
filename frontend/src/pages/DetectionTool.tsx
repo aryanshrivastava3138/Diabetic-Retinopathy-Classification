@@ -17,7 +17,6 @@ const severityColors = {
   proliferative: 'text-red-600 bg-red-50 border-red-200'
 };
 
-const Upload: React.FC = () => {
 const DetectionTool: React.FC = () => {
   const navigate = useNavigate();
   const [uploadedImage, setUploadedImage] = useState<File | null>(null);
@@ -174,59 +173,6 @@ const DetectionTool: React.FC = () => {
             </div>
           </div>
 
-          {/* Error Display */}
-          {error && (
-            <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-              <div className="flex items-center space-x-2">
-                <XCircle className="h-5 w-5 text-red-600" />
-                <p className="text-red-800 font-medium">Analysis Error</p>
-              </div>
-              <p className="text-red-700 text-sm mt-1">{error}</p>
-            </div>
-          )}
-
-          {/* Action Buttons */}
-          <div className="flex space-x-4">
-            <button
-              onClick={handleAnalysis}
-              disabled={!uploadedImage || isProcessing}
-              className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center"
-            >
-              {isProcessing ? (
-                <>
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                  Analyzing...
-                </>
-              ) : (
-                <>
-                  <Eye className="h-4 w-4 mr-2" />
-                  Analyze Image
-                </>
-              )}
-            </button>
-            
-            <button
-              onClick={resetAnalysis}
-              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-            >
-              Reset
-            </button>
-          </div>
-
-          {/* Processing Status */}
-          {isProcessing && (
-            <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <div className="flex items-center space-x-4">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-                <div>
-                  <p className="font-medium text-gray-900">Analyzing Image</p>
-                  <p className="text-sm text-gray-600">CNN model processing (94% accuracy)...</p>
-                  <p className="text-xs text-gray-500 mt-2">Results will open in a new page</p>
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* Image Upload Area */}
           <div className="mb-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -291,6 +237,59 @@ const DetectionTool: React.FC = () => {
               </p>
             </div>
           </div>
+
+          {/* Error Display */}
+          {error && (
+            <div className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4">
+              <div className="flex items-center space-x-2">
+                <XCircle className="h-5 w-5 text-red-600" />
+                <p className="text-red-800 font-medium">Analysis Error</p>
+              </div>
+              <p className="text-red-700 text-sm mt-1">{error}</p>
+            </div>
+          )}
+
+          {/* Action Buttons */}
+          <div className="flex space-x-4">
+            <button
+              onClick={handleAnalysis}
+              disabled={!uploadedImage || isProcessing}
+              className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center"
+            >
+              {isProcessing ? (
+                <>
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                  Analyzing...
+                </>
+              ) : (
+                <>
+                  <Eye className="h-4 w-4 mr-2" />
+                  Analyze Image
+                </>
+              )}
+            </button>
+            
+            <button
+              onClick={resetAnalysis}
+              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+            >
+              Reset
+            </button>
+          </div>
+
+          {/* Processing Status */}
+          {isProcessing && (
+            <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <div className="flex items-center space-x-4">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+                <div>
+                  <p className="font-medium text-gray-900">Analyzing Image</p>
+                  <p className="text-sm text-gray-600">CNN model processing (94% accuracy)...</p>
+                  <p className="text-xs text-gray-500 mt-2">Results will open in a new page</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Information Cards */}
